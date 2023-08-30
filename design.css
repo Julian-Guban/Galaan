@@ -1,0 +1,614 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  overflow: auto;
+  background: linear-gradient(#0000003f, #00000046), url("assets/paperph.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p {
+  text-align: center;
+  padding-bottom: 1 10%;
+}
+
+nav {
+  top: 0%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 9;
+}
+
+nav:hover {
+  background-color: rgba(156, 128, 95, 0.445);
+  backdrop-filter: blur(3px);
+}
+
+nav-left {
+  margin-left: 2%;
+  border-radius: 5px;
+}
+
+.logo img {
+  width: 180px;
+}
+
+nav-right {
+  margin-right: 3%;
+}
+
+nav-right a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: large;
+  font-weight: 400px;
+  padding: 20px;
+  margin: 0;
+}
+
+nav-right a:nth-child(1) {
+  background-color: #00000038;
+  border-radius: 10px;
+}
+
+nav-right a:hover {
+  background-color: #ffffff86;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border-bottom: 4px solid #251302;
+  box-shadow: 1px solid #ffffff;
+  font-weight: 400;
+}
+
+.up {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  border: 1px solid black;
+  border-radius: 999px;
+  width: 35px;
+  height: 35px;
+  background-color: #977254f3;
+  z-index: 4;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  rotate: -90deg;
+  align-self: center;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.up:hover {
+  background-color: #6d543fc5;
+}
+
+header {
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 25px;
+  backdrop-filter: blur(1.5px);
+}
+
+header .layer {
+  backdrop-filter: blur(3px);
+  background-color: #ffffff9d;
+  padding: 50px 20px;
+  border-radius: 20px;
+}
+
+.board {
+  background-image: url("assets/hand-drawn-of-philippines-3d-map-png.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: fit-content;
+  align-self: center;
+  border: 5px solid #402006;
+  border-radius: 20px;
+  justify-content: center;
+  backdrop-filter: blur(1.5px);
+  font-weight: bold;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  align-self: center;
+  font-family: garamond;
+  max-width: fit-content;
+  color: #33261b;
+  border-bottom: 2px solid #402006;
+  font-size: 85px;
+  letter-spacing: 0.3em;
+  transform: scale(1.1, 0.98);
+  text-shadow: 0px 5px 2px #ffffff;
+}
+
+.title h2 {
+  justify-content: center;
+  align-self: center;
+  font-family: "Courier New", Courier, monospace;
+  max-width: fit-content;
+  letter-spacing: 2px;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  transform: scale(1.2, 1);
+  text-shadow: 0px 2px 2px #ffffff;
+  font-weight: bold;
+}
+
+header .container {
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: (1.5px);
+  font-weight: bold;
+}
+
+header .container h4 {
+  background-color: #ffffff56;
+  font-weight: normal;
+  max-width: fit-content;
+  border-top: 3px solid #402006;
+  border-bottom: 3px solid #402006;
+  color: #000000;
+  justify-content: center;
+  text-align: center;
+  text-indent: 50px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 30px;
+  border-radius: 100px;
+  font-weight: bold;
+}
+
+.burgir {
+  content: "";
+  display: fixed;
+  visibility: none;
+  position: none;
+}
+
+.ph {
+  width: 100%;
+}
+
+.name,
+.islands,
+.coordinates,
+.population {
+  font-weight: normal;
+  max-width: fit-content;
+  color: #000000;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  text-indent: 0px;
+  font-weight: bold;
+}
+
+.board .container h3 {
+  font-family: "Courier New", Courier, monospace;
+  padding: 30px;
+  color: #000000;
+  font-weight: bold;
+  text-indent: 80px;
+}
+
+#mid {
+  height: 45px;
+}
+
+#destinations {
+  max-width: 94%;
+  max-height: fit-content;
+  margin: 2% 3% 2% 3%;
+  border-radius: 100px 100px 100px 100px;
+  border-top: 4px solid #2c1807;
+}
+
+.info {
+  background-color: #ffffff54;
+  border-bottom: 4px solid #251302;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.info h1 {
+  text-align: center;
+  font-family: garamond;
+  color: #33261b;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  font-size: 65px;
+  letter-spacing: 0.1em;
+  transform: scale(1.1, 0.98);
+}
+
+.info h3 {
+  font-weight: 300;
+  font-family: "Courier New", Courier, monospace;
+  text-indent: 50px;
+}
+
+.areas {
+  background-color: #ffffff54;
+  width: 100%;
+  height: 620px;
+  border-radius: 100px;
+  border: 4px solid #2c1807;
+  background-image: url("assets/hand-drawn-of-philippines-3d-map-png.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: grid;
+  grid-template-rows: 0.6fr 0.2fr 0.3fr;
+  grid-template-columns: 1fr;
+}
+
+.lznlayer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 99px 99px 0px 0px;
+}
+
+.luzon {
+  bottom: 0;
+  position: absolute;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-family: garamond;
+  letter-spacing: 0.05em;
+  font-size: 100px;
+  border-bottom: 3px solid #000000;
+  margin: 0;
+}
+
+.luzon:hover {
+  background-color: rgba(0, 0, 0, 0.363);
+  border-radius: 0px 100px 0px 0px;
+  border-bottom: 3px solid black;
+  padding-top: 100%;
+  padding-right: 100%;
+  color: white;
+  transition: 0.5s;
+}
+
+.vyslayer {
+  position: relative;
+  overflow: hidden;
+}
+
+.visayas {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-family: garamond;
+  letter-spacing: 0.05em;
+  font-size: 100px;
+  border-bottom: 3px solid black;
+}
+
+.visayas:hover {
+  background-color: rgba(0, 0, 0, 0.363);
+  border-bottom: 3px solid black;
+  padding-left: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  color: white;
+  transition: 0.5s;
+}
+
+.mdnlayer {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 0px 90px 90px;
+}
+
+.mindanao {
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-family: garamond;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid black;
+  font-size: 100px;
+}
+
+.mindanao:hover {
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.363);
+  border-bottom: 0px none;
+  padding-right: 100%;
+  padding-bottom: 100%;
+  color: white;
+  transition: 0.5s;
+}
+
+.mdnlayer:hover {
+  width: 100%;
+  border-top: 3px solid black;
+  margin-top: -3px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 97.5%;
+  color: rgb(160, 160, 160);
+  background-color: #2c1807;
+  text-align: center;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-radius: 5px 5px 0px 0px;
+}
+
+footer p {
+  padding: 5px 30px;
+}
+
+@media only screen and (max-width: 1300px) {
+  * {
+    font-size: calc(60% + 0.8vmin);
+  }
+
+  nav {
+    max-width: 100%;
+  }
+
+  a:nth-child(3):hover {
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header .container h3 {
+    font-size: 100%;
+    margin: 0%;
+  }
+
+  .board {
+    max-width: fit-content;
+    justify-content: center;
+  }
+
+  .board img {
+    width: 30%;
+    left: 30%;
+  }
+
+  .board .container h3 {
+    overflow: auto;
+  }
+
+  .info {
+    display: block;
+    justify-content: center;
+  }
+
+  .info h1 {
+    align-self: center;
+  }
+
+  .burgir1 {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    padding: 4px;
+    margin-right: 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.007);
+  }
+
+  .burgir1:hover .roles {
+    opacity: 100%;
+    background-color: #6d543fc5;
+    border: 1px solid black;
+  }
+
+  .bar1,
+  .burgir1::after,
+  .burgir1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px 0px;
+    transition: 0.4s;
+    border-radius: 10px;
+  }
+
+  .part1 a {
+    font-size: large;
+  }
+
+}
+
+@media only screen and (max-width: 770px) {
+  body {
+    background-image: 90deg;
+  }
+
+  .title h1 {
+    padding-top: 40px;
+    font-size: xx-large;
+  }
+
+  .title h2 {
+    justify-content: center;
+    align-self: center;
+  }
+
+  .info h1 {
+    font-size: x-large;
+    align-self: center;
+  }
+
+  .info h3 {
+    text-indent: 0%;
+  }
+
+  .areas{
+    background-color: #ffffff38;
+  }
+  .luzon,
+  .visayas,
+  .mindanao {
+    font-size: calc(60% + 8vmin);
+    color: white;
+  }
+
+  .visayas:hover {
+    height: fit-content;
+    padding-top: 100%;
+  }
+
+  .mdnlayer:hover {
+    margin-top: -2px;
+    border-radius: 0px 0px 99px 99px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    max-width: 100%;
+  }
+
+  nav-left .logo img {
+    max-width: 100px;
+    margin-left: 0%;
+  }
+
+  a:nth-child(1):hover {
+    border-radius: 10px 0px 10px 10px;
+  }
+
+  a:nth-child(3):hover {
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .up {
+    display: none;
+  }
+
+  .burgir {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    padding: 4px;
+    margin-right: 25px;
+    border-radius: 5px;
+  }
+
+  .burgir:hover {
+    background-color: #6d543fc5;
+  }
+
+  .bar,
+  .burgir::after,
+  .burgir::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px 0px;
+    transition: 0.4s;
+    border-radius: 10px;
+  }
+
+  nav-right {
+    width: max-content;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    align-items: center;
+    background-color: #8b7059c5;
+    top: 70%;
+    right: 0%;
+    border: 1px solid #402006;
+    border-radius: 15px 0px 15px 15px;
+    z-index: 1;
+  }
+
+  nav-right.is-active {
+    display: block;
+    opacity: 100%;
+    top: 100%;
+    transition: 0.5s;
+  }
+
+  a {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+  }
+
+  nav-right a:nth-child(1) {
+    border-radius: 10px 0px 0px 0px;
+  }
+
+  .info h1 {
+    font-size: large;
+    align-self: center;
+  }
+
+  .phil div {
+    justify-content: left;
+    text-align: left;
+  }
+
+  .layer .container h3,
+  .layer .container h4 {
+    text-indent: 0px;
+  }
+
+}
+
+/* ::-webkit-scrollbar{
+    display: none;
+} */
